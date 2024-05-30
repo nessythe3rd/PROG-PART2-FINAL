@@ -239,3 +239,26 @@ namespace PROG_PART2_FINAL
             Console.ReadKey();
             return;
         }
+        Recipe selectedRecipe = sortedRecipes[recipeIndex];
+        Console.WriteLine("-------------------");
+        Console.WriteLine($"RECIPE NAME: {selectedRecipe.Name}");
+        Console.WriteLine("-------------------");
+        Console.WriteLine("Ingredients:");
+
+        double totalCalories = 0;
+        foreach (var ingredient in selectedRecipe.Ingredients)
+        {
+            Console.WriteLine($"- {ingredient.Name} ({ingredient.FoodGroup}), {ingredient.Calories} calories, {ingredient.Measurement}");
+            totalCalories += ingredient.Calories;
+        }
+
+        Console.WriteLine("Instructions:");
+        foreach (var step in selectedRecipe.Instructions)
+        {
+            Console.WriteLine($"- {step}");
+        }
+
+        Console.WriteLine($"Total Calories: {totalCalories}");
+        Console.WriteLine("Press any key to continue...");
+        Console.ReadKey();
+    }
