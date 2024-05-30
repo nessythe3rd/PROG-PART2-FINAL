@@ -1,0 +1,7 @@
+C:\Users\ganee\Desktop\PROG-PART2\PROG-PART2\bin\Debug\PROG-PART2.exe.config
+C:\Users\ganee\Desktop\PROG-PART2\PROG-PART2\bin\Debug\PROG-PART2.exe
+C:\Users\ganee\Desktop\PROG-PART2\PROG-PART2\bin\Debug\PROG-PART2.pdb
+C:\Users\ganee\Desktop\PROG-PART2\PROG-PART2\obj\Debug\PROG-PART2.csproj.AssemblyReference.cache
+C:\Users\ganee\Desktop\PROG-PART2\PROG-PART2\obj\Debug\PROG-PART2.csproj.CoreCompileInputs.cache
+C:\Users\ganee\Desktop\PROG-PART2\PROG-PART2\obj\Debug\PROG-PART2.exe
+C:\Users\ganee\Desktop\PROG-PART2\PROG-PART2\obj\Debug\PROG-PART2.pdb
