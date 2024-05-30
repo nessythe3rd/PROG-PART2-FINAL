@@ -99,3 +99,23 @@ namespace PROG_PART2_FINAL
 
             Console.WriteLine();
         }
+        Console.Write("How many steps? ");
+        int howManySteps = int.Parse(Console.ReadLine());
+
+        for (int i = 0; i < howManySteps; i++)
+        {
+            Console.Write($"Enter Step {i + 1}: ");
+            recipe.Instructions.Add(Console.ReadLine());
+        }
+
+        recipes.Add(recipe);
+
+        if (recipe.TotalCalories > 300)
+        {
+            Console.WriteLine("WARNING!: TOTAL CALORIES EXCEED 300.");
+        }
+
+        Console.WriteLine("Recipe added successfully!");
+        Console.WriteLine("Press any key to continue...");
+        Console.ReadKey();
+    }
