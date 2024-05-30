@@ -165,3 +165,48 @@ namespace PROG_PART2_FINAL
         Console.WriteLine("Press any key to continue...");
         Console.ReadKey();
     }
+    private void DeleteRecipe(List<Recipe> recipes)
+    {
+        DisplayHeader("Delete a Recipe");
+
+        if (recipes.Count == 0)
+        {
+            Console.WriteLine("No recipes available to delete.");
+            Console.WriteLine("Press any key to continue...");
+            Console.ReadKey();
+            return;
+        }
+
+        var sortedRecipes = recipes.OrderBy(r => r.Name).ToList();
+        Console.WriteLine("Available Recipes:");
+        for (int i = 0; i < sortedRecipes.Count; i++)
+        {
+            Console.WriteLine($"{i + 1}. {sortedRecipes[i].Name}");
+        }
+
+        Console.Write("Enter the number of the recipe you want to delete: ");
+        int recipeIndex = int.Parse(Console.ReadLine()) - 1;
+
+        if (recipeIndex < 0 || recipeIndex >= sortedRecipes.Count)
+        {
+            Console.WriteLine("Invalid recipe number.");
+            Console.WriteLine("Press any key to continue...");
+            Console.ReadKey();
+            return;
+        }
+
+        recipes.RemoveAt(recipeIndex);
+        Console.WriteLine("Recipe deleted successfully.");
+        Console.WriteLine("Press any key to continue...");
+        Console.ReadKey();
+    }
+
+    private double ScaleMeasurement(string measurement, double scalingFactor)
+    {
+        string numericPart = new string(measurement.TakeWhile(char.IsDigit).ToArray());
+        if (double.TryParse(numericPart, out double amount))
+        {
+            return amount * scalingFactor;
+        }
+        return 0;
+    }
