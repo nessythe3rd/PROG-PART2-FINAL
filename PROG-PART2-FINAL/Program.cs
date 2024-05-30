@@ -10,6 +10,8 @@ namespace PROG_PART2_FINAL
     {
         static void Main(string[] args)
         {
+            RecipeClass recipeClass = new RecipeClass();
+            recipeClass.Run();
         }
     }
 }

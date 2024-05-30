@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace PROG_PART2_FINAL
 {
-    internal class Recipe
+    internal class RecipeClass
     {
         public string Name { get; set; }
         public List<Ingredient> Ingredients { get; set; } = new List<Ingredient>();
