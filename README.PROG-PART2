@@ -1,1 +1,26 @@
-READ
+ST10214012 
+RECIPE APP
+
+Application Instructions.
+User will be presented with 6 options to choose from:
+1.Add new recipe
+2.View Recipe
+3.Scale a recipe
+4.Delete a recipe
+5.Delete all saved recipe data
+6.exit the application
+
+1.In option 1 the user will have to add in the recipe details such as recipe name,how many ingredients the recipe has, the steps in how to make it,amount of calories in each ingredient and as well as scaling.
+The user will have to insert the information of the recipe.The user is able to add multiple recipes in which he can view.
+
+2.Option 2 allows the user to view what he has added, it will display everything he added into option 1. The recipe will be displayed in alphabetical order for easy organising, it will also add up the total calories 
+of each ingredient within the recipe.
+
+3.Option 3 allows the user to scale a recipe depending on how much of the recipe he wants to make, if the user wants to make half of what is required he can half the recipe, if he wants to double it he is able to 
+multiply the recipe by 2.
+
+4.Option 4 allows the user to remove a recipe that has been saved, if the user no longer wants to have a recipe or if the user has made a mistake in the recipe,the user is able to delete it and restart.
+
+5.Option 5  allows the user to delete all data, if the user wants to restart the entire saved recipe he can, this option will delete every single recipe so that the user can restart.
+
+6.Option 6 allows the user to exit, user exits application.
