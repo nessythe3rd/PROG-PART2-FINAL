@@ -55,3 +55,20 @@ namespace PROG_PART2_FINAL
 
         Console.ResetColor();
     }
+    private void DisplayHeader(string title)
+    {
+        Console.Clear();
+        Console.WriteLine(new string('=', 30));
+        Console.WriteLine($"       {title}");
+        Console.WriteLine(new string('=', 30));
+    }
+    //Adding recipe option no.1
+    //User is asked to add reccipe
+    private void AddRecipe(List<Recipe> recipes)
+    {
+        DisplayHeader("Add a New Recipe");
+
+        Console.Write("Enter Recipe Name: ");
+        string recipeName = Console.ReadLine();
+
+        Recipe recipe = new Recipe { Name = recipeName };
