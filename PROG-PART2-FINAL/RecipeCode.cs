@@ -29,3 +29,29 @@ namespace PROG_PART2_FINAL
             Console.WriteLine("5. Exit the application");
             Console.Write("Choose an option: ");
             string choice = Console.ReadLine();
+
+            switch (choice)
+            {
+                case "1":
+                    AddRecipe(recipes);
+                    break;
+                case "2":
+                    ViewRecipes(recipes);
+                    break;
+                case "3":
+                    ScaleRecipe(recipes);
+                    break;
+                case "4":
+                    DeleteRecipe(recipes);
+                    break;
+                case "5":
+                    exit = true;
+                    break;
+                default:
+                    Console.WriteLine("Invalid option. Please try again.");
+                    break;
+            }
+        }
+
+        Console.ResetColor();
+    }
