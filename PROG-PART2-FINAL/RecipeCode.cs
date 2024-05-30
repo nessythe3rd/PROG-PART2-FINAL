@@ -119,3 +119,49 @@ namespace PROG_PART2_FINAL
         Console.WriteLine("Press any key to continue...");
         Console.ReadKey();
     }
+    private void ScaleRecipe(List<Recipe> recipes)
+    {
+        DisplayHeader("Scale a Recipe");
+
+        if (recipes.Count == 0)
+        {
+            Console.WriteLine("No recipes available to scale.");
+            Console.WriteLine("Press any key to continue...");
+            Console.ReadKey();
+            return;
+        }
+
+        var sortedRecipes = recipes.OrderBy(r => r.Name).ToList();
+        Console.WriteLine("Available Recipes:");
+        for (int i = 0; i < sortedRecipes.Count; i++)
+        {
+            Console.WriteLine($"{i + 1}. {sortedRecipes[i].Name}");
+        }
+
+        Console.Write("Enter the number of the recipe you want to scale: ");
+        int recipeIndex = int.Parse(Console.ReadLine()) - 1;
+
+        if (recipeIndex < 0 || recipeIndex >= sortedRecipes.Count)
+        {
+            Console.WriteLine("Invalid recipe number.");
+            Console.WriteLine("Press any key to continue...");
+            Console.ReadKey();
+            return;
+        }
+
+        Recipe selectedRecipe = sortedRecipes[recipeIndex];
+
+        Console.Write("Enter scaling factor (e.g., 0.5, 2, 3): ");
+        double scalingFactor = double.Parse(Console.ReadLine());
+
+        Console.WriteLine($"RECIPE NAME: {selectedRecipe.Name}");
+        Console.WriteLine("Scaled Ingredients:");
+        foreach (var ingredient in selectedRecipe.Ingredients)
+        {
+            double scaledAmount = ScaleMeasurement(ingredient.Measurement, scalingFactor);
+            Console.WriteLine($"- {ingredient.Name} ({ingredient.FoodGroup}), {ingredient.Calories} calories, {scaledAmount} (scaled by {scalingFactor})");
+        }
+
+        Console.WriteLine("Press any key to continue...");
+        Console.ReadKey();
+    }
