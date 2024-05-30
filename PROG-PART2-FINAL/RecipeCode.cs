@@ -262,3 +262,13 @@ namespace PROG_PART2_FINAL
         Console.WriteLine("Press any key to continue...");
         Console.ReadKey();
     }
+    //*******************************END OF FILE*****************************************************
+//REFERENCES
+//https://www.c-sharpcorner.com/article/c-sharp-list/
+//https://learn.microsoft.com/en-us/dotnet/api/system.collections.generic.list-1?view=net-8.0
+//https://learn.microsoft.com/en-us/dotnet/api/system.double.parse?view=net-8.0
+//https://stackoverflow.com/questions/2675196/c-sharp-method-to-scale-values
+//https://learn.microsoft.com/en-us/dotnet/api/system.console.clear?view=net-8.0
+//https://www.dotnetperls.com/parse#:~:text=The%20C%23%20int.,with%20no%20loss%20of%20information.
+//https://learn.microsoft.com/en-us/dotnet/csharp/programming-guide/statements-expressions-operators/statements
+//https://www.youtube.com/watch?v=9V5B3dNoVIA
