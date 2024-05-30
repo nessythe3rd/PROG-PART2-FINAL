@@ -72,3 +72,30 @@ namespace PROG_PART2_FINAL
         string recipeName = Console.ReadLine();
 
         Recipe recipe = new Recipe { Name = recipeName };
+        Console.Write("How many ingredients? ");
+        int ingredientNumber = int.Parse(Console.ReadLine());
+
+        for (int i = 0; i < ingredientNumber; i++)
+        {
+            Console.Write($"Enter Ingredient Name {i + 1}: ");
+            string ingredientName = Console.ReadLine();
+
+            Console.Write("Enter Calories: ");
+            double calories = double.Parse(Console.ReadLine());
+
+            Console.Write("Enter Food Group: ");
+            string foodGroup = Console.ReadLine();
+
+            Console.Write("Enter Measurement (e.g., 1 cup, 250 grams): ");
+            string measurement = Console.ReadLine();
+
+            recipe.Ingredients.Add(new Ingredient
+            {
+                Name = ingredientName,
+                Calories = calories,
+                FoodGroup = foodGroup,
+                Measurement = measurement
+            });
+
+            Console.WriteLine();
+        }
